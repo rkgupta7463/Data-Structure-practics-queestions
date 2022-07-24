@@ -15,25 +15,25 @@ void main(){
         scanf("%d",&a[i]);
     }
     
-    for (int i = 0; i < n-1; i++)
-    {
-        for (int j = 0; j < n-1-i; j++)
-        {
-            if (a[j]>a[j+1])
-            {
-                int temp=a[j];
-                a[j] = a[j+1];
-                a[j+1] = temp;
-            }
+    // for (int i = 0; i < n-1; i++)
+    // {
+    //     for (int j = 0; j < n-1-i; j++)
+    //     {
+    //         if (a[j]>a[j+1])
+    //         {
+    //             int temp=a[j];
+    //             a[j] = a[j+1];
+    //             a[j+1] = temp;
+    //         }
             
-        }
+    //     }
         
-    }
-    printf("Assending order:-\n");
-    for (int i = 0; i < n; i++)
-    {
-        printf("%d\t",a[i]);
-    }
+    // }
+    // printf("Assending order:-\n");
+    // for (int i = 0; i < n; i++)
+    // {
+    //     printf("%d\t",a[i]);
+    // }
     
     
     printf("\nEnter elements to be searched\n");
@@ -41,7 +41,12 @@ void main(){
     pos=b_search(a,n,search1);
     if (pos!=-1)
     {
+        if (search1==a[pos])
+        {
+            /* code */
     printf("Elements %d is founded at %d position",search1,pos+1);   
+        }
+        
     }
     else{
         printf("Elements is not founded!!");
